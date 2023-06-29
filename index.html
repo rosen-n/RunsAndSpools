@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- <link href="../_css/style.css" rel="stylesheet">  -->
+    <style>
+      table {
+        border: 1px solid black;
+        margin: 2px;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="javascript:readInputs(csvFile, sMakeUp.value, eMakeUp.value)">
+      <input type="file" id="csvFile" name="csvFile">
+      <br>
+      <label for="sMakeUp">Starting Make Up (# feet <100):</label>
+      <input type="text" id="sMakeUp" name="sMakeUp" pattern="[0-9]" min=0 max=100>
+      <br>
+      <label for="eMakeUp">Ending Make Up (# feet <100):</label>
+      <input type="text" id="eMakeUp" name="eMakeUp" pattern="[0-9]" min=0 max=100>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <br><br>
+    <strong>Result:</strong>
+    <div id="result"></div>
+    <script src="runsandspools.js"></script>
+  </body>
+</html>
